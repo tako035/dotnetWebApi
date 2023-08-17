@@ -18,6 +18,13 @@
     <None Remove="Utilities\Security\Encryption\" />
     <None Remove="Extensions\" />
     <None Remove="Utilities\Security\Hashing\" />
+    <None Remove="CrossCuttingConcerns\" />
+    <None Remove="CrossCuttingConcerns\Validation\" />
+    <None Remove="Utilities\Interceptors\" />
+    <None Remove="Utilities\Interceptors\Autofac\" />
+    <None Remove="Aspects\" />
+    <None Remove="Aspects\Autofac\" />
+    <None Remove="Aspects\Autofac\Validation\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -31,6 +38,13 @@
     <Folder Include="Utilities\Security\Encryption\" />
     <Folder Include="Extensions\" />
     <Folder Include="Utilities\Security\Hashing\" />
+    <Folder Include="CrossCuttingConcerns\" />
+    <Folder Include="CrossCuttingConcerns\Validation\" />
+    <Folder Include="Utilities\Interceptors\" />
+    <Folder Include="Utilities\Interceptors\Autofac\" />
+    <Folder Include="Aspects\" />
+    <Folder Include="Aspects\Autofac\" />
+    <Folder Include="Aspects\Autofac\Validation\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
@@ -38,5 +52,8 @@
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.32.1" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.4" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+    <PackageReference Include="Castle.Core" Version="5.1.1" />
   </ItemGroup>
 </Project>

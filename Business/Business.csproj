@@ -12,6 +12,8 @@
     <None Remove="DependencyResolvers\" />
     <None Remove="DependencyResolvers\Autofac\" />
     <None Remove="Concrete\Constants\" />
+    <None Remove="ValidationRules\" />
+    <None Remove="ValidationRules\FluentValidation\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstract\" />
@@ -19,6 +21,8 @@
     <Folder Include="DependencyResolvers\" />
     <Folder Include="DependencyResolvers\Autofac\" />
     <Folder Include="Concrete\Constants\" />
+    <Folder Include="ValidationRules\" />
+    <Folder Include="ValidationRules\FluentValidation\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\shopEntities\shopEntities.csproj" />
@@ -26,7 +30,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac" Version="7.1.0" />
-    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.1.0" />
     <PackageReference Include="Slugify.Core" Version="4.0.1" />
+    <PackageReference Include="Castle.Core" Version="5.1.1" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.1.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
   </ItemGroup>
 </Project>

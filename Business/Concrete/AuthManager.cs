@@ -10,12 +10,12 @@ using shopEntities.Dtos;
 
 namespace Business.Concrete
 {
-    public class AuthService:IAuthService
+    public class AuthManager:IAuthService
     {
         private ITokenHelper _tokenHelper;
         private IUserService _userService;
 
-        public AuthService(IUserService userService, ITokenHelper tokenHelper)
+        public AuthManager(IUserService userService, ITokenHelper tokenHelper)
         {
             _userService = userService;
             _tokenHelper = tokenHelper;

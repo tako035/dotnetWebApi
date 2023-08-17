@@ -5,28 +5,34 @@ using Business.Concrete.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using shopEntities.Concrete;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 
 namespace Business.Concrete
 {
 
     
-    public class ProductService : IProductService
+    public class ProductManager : IProductService
     {
         private IProductDal _productDal;
 
-        public ProductService(IProductDal productDal)
+        public ProductManager(IProductDal productDal)
         {
             _productDal = productDal;
         }
 
+        [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
+
+
             if (product.Name != null || product.Name != "")
             {
                 SlugHelper helper = new SlugHelper();
                 product.Slug = helper.GenerateSlug(product.Name);
             }
             product.Created_at = DateTime.Now;
+
             try
             {
                 _productDal.Add(product);

@@ -11,7 +11,6 @@ namespace shopEntities.Concrete
         public int Id { get; set; }
 
         public string? Name { get; set; }
-        [Required(ErrorMessage = "Bu Alan Zorunludur.")]
 
         public string? Desc { get; set; }
 

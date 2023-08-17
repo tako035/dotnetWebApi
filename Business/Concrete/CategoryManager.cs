@@ -8,11 +8,11 @@ using shopEntities.Concrete;
 
 namespace Business.Concrete
 {
-    public class CategoryService : ICategoryService
+    public class CategoryManager : ICategoryService
     {
         ICategoryDal _categoryDal;
 
-        public CategoryService(ICategoryDal categoryDal)
+        public CategoryManager(ICategoryDal categoryDal)
         {
             _categoryDal = categoryDal;
         }

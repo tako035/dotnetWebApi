@@ -6,11 +6,11 @@ using Core.Entities.Concrete;
 
 namespace Business.Concrete
 {
-    public class UserServices: IUserService
+    public class UserManager: IUserService
     {
         IUserDal _userDal;
 
-        public UserServices(IUserDal userDal)
+        public UserManager(IUserDal userDal)
         {
             _userDal = userDal;
         }
